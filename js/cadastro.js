@@ -8,12 +8,5 @@ function nextStep(step) {
 }
 
 function finalizar() {
-    // Redireciona com base no ID salvo
-    if (idEsc === "home-aluno") {
-      window.location.href = "home-aluno.html";
-    } else if (idEsc === "home-monitor") {
-      window.location.href = "home-monitor.html";
-    } else {
-      alert("Erro: Nenhuma opção selecionada.");
-    }
+      window.location.href = "agendamento.html";
   }
