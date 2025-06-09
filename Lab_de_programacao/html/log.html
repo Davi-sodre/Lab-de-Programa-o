@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área - Mentoria UFMA</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="esquerda">
+            <div class="logo">
+                <img src="../img/logoM.png" alt="logo">
+            <div>
+            <strong>Monitoria</strong><br>
+            <span style="color:#00aacc">UFMA</span>
+            </div>
+        </div>
+        <div class="log-step active" id="step1">
+        <div class="opcoes">
+                <h2>Área</h2>
+                <button type="button" class="btn" id="home-aluno" onclick="nextStep(2, this.id)">Entrar como Aluno</button>
+                <button type="button" class="btn" id="home-monitor" onclick="nextStep(2, this.id)">Entrar como Mentor</button>
+                <div class="linha-com-texto"><span>Primeiro acesso?</span></div>
+                <a href="Cadastro.html" class="btn2">Cadastrar-se</a>
+            </div>
+        </div>
+        <div class="log-step" id="step2">
+        <h2>Entrar</h2>
+            <div class="form">
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Informe o e-mail cadastrado">
+            </div>
+            <div class="form">
+                 <label for="senha">Senha</label>
+                <input type="password" placeholder="Informe a senha cadastrada">
+            </div>
+            <button class="btn" onclick="finalizar()">Entrar</button>
+            </div>
+        </div>  
+        </div>
+        <div class="direita">
+            <img src="../img/img-login.png" alt="Ilustração de alunos">
+        </div>
+
+    </div>
+    <script src="../js/login.js"></script>
+</body> 
+</html>
