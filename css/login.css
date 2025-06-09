@@ -125,3 +125,27 @@ h2{
       text-decoration: none;
       border-radius: 5px;
 }
+
+.logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+.logo img {
+      width: 40px;
+    }
+
+.log-step{
+  display: none;
+}
+
+.log-step.active {
+      display: block;
+      animation: fade 0.3s;
+    }
+
+@keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
