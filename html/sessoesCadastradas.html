@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitoria UFMA</title>
+  <link rel="stylesheet" href="/css/sessoes.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <div>
+      <img src="/img/logo.png" alt="logo">
+      <nav>
+        <a href="#">Nova Monitoria</a>
+        <a href="#">Sessões Agendadas</a>
+      </nav>
+    </div>
+    <div class="logout">
+      <button onclick="sair()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h2>Sessões cadastradas</h2>
+      <div>
+        <strong>Nome Monitor</strong> <br />
+        <small>Monitor</small>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/60" alt="Imagem" />
+      <div class="card-content">
+        <strong>Laboratório de Programação</strong><br />
+        Monitor: Nome Monitor<br />
+        Segunda: 09:00 - 09:30<br />
+        Quarta: 09:00 - 09:30<br />
+        Link: <a href="https://linkdareunião.meet">https://linkdareunião.meet</a>
+
+        <div class="card-buttons">
+          <button>Editar</button>
+          <button>Incluir material</button>
+          <button>Excluir</button>
+          <button>Chat</button>
+        </div>
+      </div>
+      <div class="rating">
+        Avaliação <span>★</span> 5<br />
+        <small>Comentários 💬</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  
+<div id="modalSucesso" class="modal-sucesso">
+  <div class="modal-content-sucesso">
+    <span class="modal-icono">✖</span>
+    <p>Sessão removida com sucesso</p>
+    <button class="btn-ok" onclick="fecharModal()">OK</button>
+  </div>
+</div>
+
+</body>
+</html>

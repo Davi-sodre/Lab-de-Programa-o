@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.informacoes_usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #009999;
+}
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-header {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #fff;
+  justify-content: space-between; /* joga o botão para baixo */
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-item {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.sidebar-item.active {
+  color: #009999;
+}
+
+.bnt-Sair {
+  margin-top: 2rem;
+  background-color: white;
+  border: 1px solid #009999;
+  color: #009999;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-monitor {
+  display: flex;
+  flex: 1;
+}
+
+.monitor-main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.schedule-grid {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.schedule-grid table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-grid th,
+.schedule-grid td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 8px;
+  min-width: 80px;
+}
+
+.schedule-grid th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.filled {
+  background-color: #17b1aa;
+  color: white;
+  font-weight: bold;
+}
+
+
+.bnt-Sair {
+  width: 100%;                
+  padding: 10px 0;
+  background-color: #009999;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 450px;
+}
+
+.bnt-Sair:hover {
+  background-color: #007777;
+}

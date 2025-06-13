@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitorias</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header>
-  </header>
-  <div class="container">
-     <img src="../img/image.png" alt="Logo padrao" class="Logo" width="100">
-    <h2>Monitorias Disponíveis</h2>
-     <div class="search-box">
-      <input type="text" placeholder="Buscar monitoria">
-      <span class="search-icon">🔍</span>
-    </div>
+  <header></header>
 
-    <div class="monitor-card">
-      <div>
-        <strong>Monitor 01</strong><br>
-        Estrutura de dados I<br>
-        <small>seg: 10:00 - 11:00 | qua: 10:00 - 12:00</small>
+  <main class="main-content">
+    <div class="agendamento-wrapper">
+      <div class="conteudo-agendamento">
+        <img src="../img/image.png" alt="Logo padrao" class="Logo" width="100">
+        <h2>Monitorias Disponíveis</h2>
+
+        <div id="success-message" class="success-message">
+          Monitoria agendada com sucesso!
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Buscar monitoria">
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="monitor-card">
+          <div>
+            <strong>Monitor 01</strong><br>
+            Estrutura de dados I<br>
+            <small>seg: 10:00 - 11:00 | qua: 10:00 - 12:00</small>
+          </div>
+          <button class="agendar-btn">Agendar</button>
+        </div>
+
+        <div class="monitor-card">
+          <div>
+            <strong>Monitor 02</strong><br>
+            Linguagem de programação<br>
+            <small>ter: 10:00 - 11:00 | qui: 10:00 - 12:00</small>
+          </div>
+          <button class="agendar-btn">Agendar</button>
+        </div>
+
+        <div class="monitor-card">
+          <div>
+            <strong>Monitor 03</strong><br>
+            Redes de computadores<br>
+            <small>sex: 10:00 - 11:00 | sáb: 10:00 - 12:00</small>
+          </div>
+          <button class="agendar-btn">Agendar</button>
+        </div>
+
+        <button class="btn-avancar">Avançar</button>
+
+        <div class="imagem-estudante-overlay">
+          <img src="../img/img - cadastro.png" alt="estudante" class="imagem-lateral-posicionada">
+        </div>
       </div>
-      <button>Agendar</button>
     </div>
+  </main>
 
-    <div class="monitor-card">
-      <div>
-        <strong>Monitor 02</strong><br>
-        Linguagem de programação<br>
-        <small>ter: 10:00 - 11:00 | qui: 10:00 - 12:00</small>
-      </div>
-      <button>Agendar</button>
-    </div>
-
-    <div class="monitor-card">
-      <div>
-        <strong>Monitor 03</strong><br>
-        Redes de computadores<br>
-        <small>sex: 10:00 - 11:00 | sáb: 10:00 - 12:00</small>
-      </div>
-      <button>Agendar</button>
-    </div>
-
-    <button class="btn-avancar" onclick="finalizar()">Avançar</button>
-  </div>
-  <script src="../js/agendamento.js"></script>
+  <script src="../js/mensagemSucs.js"></script>
 </body>
-</html>
-
 </html>
