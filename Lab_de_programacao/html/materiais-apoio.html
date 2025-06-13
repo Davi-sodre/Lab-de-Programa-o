@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materiais de Apoio</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/materiais.css" />
+  <link rel="stylesheet" href="../css/sessao.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="../img/logo1.ico" alt="Logo" />
+      </div>
+      <div class="menu">
+        <a href="buscar-monitoria.html">Buscar monitorias</a>
+        <a href="sessao-aluno.html">Minhas sessões</a>
+      </div>
+    </div>
+    <div class="logout-button">
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="icons">
+        <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação">
+      </div>
+      <div class="user perfil-link" onclick="abrirPerfil()">
+        <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+        <div>
+          <span>Nome Aluno</span>
+          <strong>Aluno</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="voltar-home" onclick="voltarPaginaAnterior()">
+        <img src="https://img.icons8.com/ios-filled/24/03bcd3/left.png" alt="Voltar">
+        <span style="margin-left: 3px;">Voltar</span>
+      </div>
+
+      <h2>Materiais de Apoio</h2>
+      <div class="lista-materiais">
+
+        <div class="material">
+          <div class="info">
+            <h3>Material A</h3>
+            <p>Tipo: PDF • Tamanho: 1.5MB • Data: 12/03/2025</p>
+          </div>
+          <div class="acoes">
+            <button class="baixar">Baixar</button>
+            <button class="abrir">Abrir</button>
+          </div>
+        </div>
+
+        <div class="material">
+          <div class="info">
+            <h3>Material B</h3>
+            <p>Tipo: Form • Tamanho: 2.4MB • Data: 12/03/2025</p>
+          </div>
+          <div class="acoes">
+            <button class="baixar">Baixar</button>
+            <button class="abrir">Abrir</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-material" id="modalMaterial">
+        <div class="modal-material-conteudo">
+          <h3>Visualização do Material</h3>
+          <p>Aqui você poderia visualizar o conteúdo do arquivo ou link selecionado.</p>
+          <button onclick="fecharModalMaterial()">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/materiais.js"></script>
+  <script src="../js/sessao.js"></script>
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

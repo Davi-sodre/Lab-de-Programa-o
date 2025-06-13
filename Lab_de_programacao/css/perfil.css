@@ -1,0 +1,62 @@
+.perfil {
+  padding: 30px;
+  max-width: 600px;
+}
+
+.perfil-link {
+  cursor: pointer;
+}
+.perfil-link:hover {
+  opacity: 0.85;
+}
+
+.user {
+  cursor: pointer;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:disabled {
+  background-color: #f1f1f1;
+  color: #777;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.botoes button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #03bcd3;
+  color: white;
+}
+
+.botoes button:nth-child(2) {
+  background-color: #2ecc71;
+}
+
+.botoes button:nth-child(3) {
+  background-color: #e74c3c;
+}

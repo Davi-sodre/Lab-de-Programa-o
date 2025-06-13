@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhe da Monitoria</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/detalhe-monitoria.css" />
+  <link rel="stylesheet" href="../css/notificacao.css">
+  <link rel="stylesheet" href="../css/sessao.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="../img/logo1.ico" alt="Logo" />
+      </div>
+      <div class="menu">
+        <a href="buscar-monitoria.html" class="ativo">Buscar monitorias</a>
+        <a href="sessao-aluno.html">Minhas sessões</a>
+      </div>
+    </div>
+    <div class="logout-button">
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="icons" onclick="alternarNotificacoes()">
+        <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação"  id="iconeSino" />
+        <span class="indicador-notificacao" id="indicadorNotificacao"></span>
+
+        <div class="notificacoes-box" id="notificacoesBox">
+          <h4>Notificações</h4>
+          <ul id="listaNotificacoes">
+          <!-- Itens dinâmicos do JS -->
+          </ul>
+        </div>
+      </div>
+      <div class="user perfil-link" onclick="abrirPerfil()">
+        <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+        <div>
+          <span>Nome Aluno</span>
+          <strong>Aluno</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="voltar-home" onclick="voltarPaginaAnterior()">
+        <img src="https://img.icons8.com/ios-filled/24/03bcd3/left.png" alt="Voltar">
+        <span style="margin-left: 3px;">Voltar</span>
+      </div>
+
+      <h2>Laboratório de Programação</h2>
+      <p><strong>Monitor:</strong> João Silva</p>
+
+      <div class="horarios">
+        <p><strong>Horários disponíveis:</strong></p>
+        <ul>
+          <li>🗓 Segunda • 09:00</li>
+          <li>🗓 Quarta • 11:00</li>
+        </ul>
+      </div>
+
+      <button class="btn-agendar" onclick="agendarSessao()">Agendar monitoria</button>
+    </div>
+  </div>
+
+  <script>
+    function agendarSessao() {
+      alert("Sessão agendada com sucesso! 🎉");
+      // Futuramente: enviar requisição para API e redirecionar
+    }
+  </script>
+  <script src="../js/notificacao.js"></script>
+  <script src="../js/sessao.js"></script>
+  <script src="../js/perfil.js"></script>
+
+</body>
+</html>

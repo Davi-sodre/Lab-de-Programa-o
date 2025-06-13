@@ -1,0 +1,184 @@
+.grade-horaria {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cabecalho, .linha-horario {
+  display: grid;
+  grid-template-columns: 80px repeat(6, 1fr);
+}
+
+.celula-header {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+.horario {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+.celula {
+  height: 60px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.celula a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+}
+.celula a:hover {
+  text-decoration: underline;
+}
+
+.celula.verde {
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.voltar-home {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.voltar-home img {
+  width: 25px;
+}
+.voltar-home span {
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.content {
+  padding: 30px;
+}
+
+.titulo-monitoria {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.nome-monitor {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.horarios {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.horarios li {
+  margin-bottom: 5px;
+}
+
+.link-reuniao a {
+  color: #03bcd3;
+  text-decoration: none;
+}
+.link-reuniao a:hover {
+  text-decoration: underline;
+}
+
+.botoes-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.botoes-acoes button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-material {
+  background-color: #3498db;
+  color: white;
+}
+.btn-chat {
+  background-color: #9b59b6;
+  color: white;
+}
+.btn-avaliar {
+  background-color: #f39c12;
+  color: white;
+}
+.btn-excluir {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.modal-exclusao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-conteudo {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.modal-conteudo img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.modal-conteudo button {
+  background-color: #03bcd3;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}

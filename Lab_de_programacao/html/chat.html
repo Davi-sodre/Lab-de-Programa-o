@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat com Monitor</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/chat.css" />
+  <link rel="stylesheet" href="../css/sessao.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="../img/logo1.ico" alt="Logo" />
+      </div>
+      <div class="menu">
+        <a href="buscar-monitoria.html">Buscar monitorias</a>
+        <a href="sessao-aluno.html">Minhas sessões</a>
+      </div>
+    </div>
+    <div class="logout-button">
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="icons">
+        <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação">
+      </div>
+      <div class="user perfil-link" onclick="abrirPerfil()">
+        <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+        <div>
+          <span>Nome Aluno</span>
+          <strong>Aluno</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="content chat">
+      <div class="voltar-home" onclick="voltarPaginaAnterior()">
+        <img src="https://img.icons8.com/ios-filled/24/03bcd3/left.png" alt="Voltar">
+        <span style="margin-left: 3px;">Voltar</span>
+      </div>
+      <div class="chat-header">
+        <img src="../img/perfil-monitor.png" alt="Perfil Monitor" class="avatar" />
+        <div class="infos">
+          <strong>Monitor A</strong>
+          <span class="online">● Online</span>
+        </div>
+
+      </div>
+
+      <div class="chat-mensagens" id="chatMensagens">
+        <div class="mensagem monitor">Como posso te ajudar?</div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" id="mensagemInput" placeholder="Digite sua mensagem..." />
+        <button onclick="enviarMensagem()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/chat.js"></script>
+  <script src="../js/sessao.js"></script>
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

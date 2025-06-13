@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sessões Agendadas</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/sessao.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="../img/logo1.ico" alt="logo" />
+      </div>
+      <div class="menu">
+        <a href="buscar-monitoria.html">Buscar monitorias</a>
+        <a href="sessao-aluno.html">Minhas sessões</a>
+      </div>
+    </div>
+    <div class="logout-button">
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="icons">
+        <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação">
+      </div>
+      <div class="user perfil-link" onclick="abrirPerfil()">
+        <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+        <div>
+          <span>Nome Aluno</span>
+          <strong>Aluno</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="voltar-home" onclick="voltarPaginaAnterior()">
+        <img src="https://img.icons8.com/ios-filled/24/03bcd3/left.png" alt="Voltar">
+
+        <span style="margin-left: 3px;">Voltar</span>
+      </div>
+    
+      <h2>Calendário de monitoria</h2>
+
+      <div class="grade-horaria">
+        <!-- Linha com dias -->
+        <div class="cabecalho">
+          <div class="celula-header"></div>
+          <div class="celula-header">Seg</div>
+          <div class="celula-header">Ter</div>
+          <div class="celula-header">Qua</div>
+          <div class="celula-header">Qui</div>
+          <div class="celula-header">Sex</div>
+          <div class="celula-header">Sáb</div>
+        </div>
+
+        <!-- Horas + células por dia -->
+        <div class="linha-horario">
+          <div class="horario">09:00</div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+        </div>
+
+        <div class="linha-horario">
+          <div class="horario">10:00</div>
+          <div class="celula"></div>
+          <div class="celula verde">
+            <a href="sessao-detalhes.html">ED I</a>
+          </div>
+          <div class="celula"></div>
+          <div class="celula verde">
+            <a href="sessao-detalhes.html">ED I</a>
+          </div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+        </div>
+
+        <div class="linha-horario">
+          <div class="horario">11:00</div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+          <div class="celula"></div>
+        </div>
+
+        <!-- ... -->
+      </div>
+    </div>
+  </div>
+  <script src="../js/sessao.js"></script>
+  <script src="../js/perfil.js"></script>
+
+</body>
+</html>

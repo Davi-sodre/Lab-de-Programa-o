@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sessão - Mentoria UFMA</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/sessao.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="../img/logo1.ico" alt="Logo" />
+      </div>
+      <div class="menu">
+        <a href="buscar-monitoria.html">Buscar monitorias</a>
+        <a href="sessao-aluno.html">Minhas sessões</a>
+      </div>
+    </div>
+    <div class="logout-button">
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="icons">
+        <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação">
+      </div>
+      <div class="user perfil-link" onclick="abrirPerfil()">
+        <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+        <div>
+          <span>Nome Aluno</span>
+          <strong>Aluno</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="voltar-home " onclick="voltarPaginaAnterior()">
+        <img src="https://img.icons8.com/ios-filled/24/03bcd3/left.png" alt="Voltar">
+
+        <span style="margin-left: 3px;">Voltar</span>
+      </div>
+      
+      <h2 class="titulo-monitoria">Estrutura de Dados I</h2>
+      <p class="nome-monitor"><strong>Monitor:</strong> Nome Monitor</p>
+
+      <ul class="horarios">
+        <li><strong>Terça:</strong>  11:00</li>
+        <li><strong>Quinta:</strong>  11:00</li>
+      </ul>
+
+      <p class="link-reuniao">
+        <strong>Link da sessão:</strong> 
+        <a href="https://linkdareunião.meet" target="_blank">https://linkdareunião.meet</a>
+      </p>
+
+      <div class="botoes-acoes">
+        <button class="btn-material" onclick="acessarMateriais()">Materiais de apoio</button>
+        <button class="btn-chat" onclick="abrirChat()">Chat</button>
+        <button class="btn-avaliar" onclick="avaliarSessao()">Avaliar</button>
+        <button class="btn-excluir" onclick="excluirSessao()">Excluir</button>
+      </div>
+
+      <div class="modal-exclusao" id="modalExclusao">
+        <div class="modal-conteudo">
+          <img src="../img/icon-excluir.png" alt="Excluído com sucesso" />
+          <p>Sessão removida com sucesso</p>
+          <button onclick="fecharModal()">OK</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/sessao.js"></script>
+  <script src="../js/avaliacao.js"></script>
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

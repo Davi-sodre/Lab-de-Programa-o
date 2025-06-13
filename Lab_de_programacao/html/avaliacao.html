@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliação da Sessão</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/avaliacao.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="../img/logo1.ico" alt="Logo" />
+      </div>
+      <div class="menu">
+        <a href="buscar-monitoria.html">Buscar monitorias</a>
+        <a href="sessao-aluno.html">Minhas sessões</a>
+      </div>
+    </div>
+    <div class="logout-button">
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="icons">
+        <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação">
+      </div>
+      <div class="user perfil-link" onclick="abrirPerfil()">
+        <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+        <div>
+          <span>Nome Aluno</span>
+          <strong>Aluno</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+
+
+      <h2>Avaliar sessão</h2>
+      <p>Como foi sua monitoria?</p>
+
+      <div class="estrelas" id="estrelas">
+        <span class="estrela" data-value="1">★</span>
+        <span class="estrela" data-value="2">★</span>
+        <span class="estrela" data-value="3">★</span>
+        <span class="estrela" data-value="4">★</span>
+        <span class="estrela" data-value="5">★</span>
+      </div>
+
+      <textarea placeholder="Comentário (opcional)"></textarea>
+
+      <button class="btn-enviar" onclick="enviarAvaliacao()">Enviar</button>
+    </div>
+  </div>
+  <script src="../js/avaliacao.js"></script>
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

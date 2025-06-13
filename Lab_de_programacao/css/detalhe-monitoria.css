@@ -1,0 +1,39 @@
+.content {
+  padding: 30px;
+  max-width: 600px;
+}
+
+.content h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.horarios {
+  margin: 20px 0;
+}
+
+.horarios ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.horarios li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.btn-agendar {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-agendar:hover {
+  background-color: #27ae60;
+}

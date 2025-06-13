@@ -12,7 +12,7 @@ body {
     }
 
 h2{
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -28,19 +28,16 @@ h2{
 .direita {
       width: 50%;
       display: flex;
+      align-items: center;
       justify-content: center;
     }
 
 .direita img {
-      max-width: 75%;
+      max-width: 100%;
       height: auto;
     }
 .esquerda {
-      width: 50%;
-    }
-
-.logo {
-      margin-bottom: 30px;
+      width: 60%;
     }
 
 .btn {
@@ -116,8 +113,9 @@ h2{
 
 .btn-form{
       display: block;
-      width: 600px;
-      margin: 10px 0;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 15px;
       padding: 10px;
       background-color: #03bcd3;
       color: white;
@@ -130,7 +128,12 @@ h2{
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 40px;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 30px;
     }
 .logo img {
       width: 40px;
