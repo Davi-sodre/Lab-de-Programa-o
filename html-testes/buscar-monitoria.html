@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar Monitorias</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #f3f3f3;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      font-size: 14px;
+    }
+
+    .menu a {
+      display: block;
+      margin-bottom: 12px;
+      color: #00BCD4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-sair {
+      background: none;
+      border: 1px solid #00BCD4;
+      color: #00BCD4;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .conteudo {
+      flex: 1;
+      padding: 30px;
+      position: relative;
+    }
+
+    .conteudo-container {
+      border: 2px solid #00BCD4;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #fff;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .usuario {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .usuario span {
+      font-weight: bold;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .input-wrapper {
+      flex: 1;
+      position: relative;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 10px 12px 10px 32px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 14px;
+    }
+
+    .input-wrapper::before {
+      content: "🔍";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+    }
+
+    .resultado-box {
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      height: 300px;
+      padding: 16px;
+      overflow-y: auto;
+    }
+
+    .voltar {
+      font-size: 24px;
+      cursor: pointer;
+      color: #00BCD4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="https://img.icons8.com/ios-filled/100/student-male.png" alt="Logo Monitoria" />
+        <div><strong>Monitoria</strong> UFMA</div>
+      </div>
+      <div class="menu">
+        <a href="#">Buscar monitorias</a>
+        <a href="#">Minhas sessões</a>
+      </div>
+    </div>
+    <button class="btn-sair">Sair</button>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="conteudo">
+    <div class="conteudo-container">
+      <div class="topo">
+        <div class="voltar">&larr;</div>
+        <div class="usuario">
+          <div>Nome Aluno<br><span>Aluno</span></div>
+          <div>👤</div>
+        </div>
+      </div>
+
+      <h2>Buscar monitoria</h2>
+
+      <div class="input-group">
+        <div class="input-wrapper">
+          <input type="text" placeholder="Disciplina" />
+        </div>
+        <div class="input-wrapper">
+          <input type="text" placeholder="Monitor" />
+        </div>
+      </div>
+
+      <div class="resultado-box">
+        Resultado da busca
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

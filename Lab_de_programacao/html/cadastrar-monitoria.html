@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Monitoria</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/notificacao.css">
+    <link rel="stylesheet" href="../css/cadastro-monitoria.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div>
+            <div class="logo">
+                <img src="../img/logo1.ico" alt="logo">
+            </div>
+            <div class="menu">
+                <a href="buscar-monitoria.html">Buscar monitorias</a>
+                <a href="sessao-aluno.html">Minhas sessões</a>
+            </div>
+        </div>
+        <div class="logout-button">
+            <button onclick="logout()">Sair</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="topbar">
+            <div class="icons" onclick="alternarNotificacoes()">
+                <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação"
+                    id="iconeSino" />
+                <span class="indicador-notificacao" id="indicadorNotificacao"></span>
+
+                <div class="notificacoes-box" id="notificacoesBox">
+                    <h4>Notificações</h4>
+                    <ul id="listaNotificacoes">
+                        <!-- Itens dinâmicos do JS -->
+                    </ul>
+                </div>
+            </div>
+            <div class="user perfil-link" onclick="abrirPerfil()">
+                <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+                <div>
+                    <span>Nome Monitor</span>
+                    <strong>Monitor</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Cadastrar nova monitoria</h2>
+
+            <form id="formMonitoria">
+                <div>
+                    <label>Curso</label><br>
+                    <select>
+                        <option>Selecione</option>
+                        <option>Ciência da Computação</option>
+                        <option>Engenharia Elétrica</option>
+                        <option>Medicina</option>
+                        <option>Direito</option>
+                        <option>Sociologia</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Código da Disciplina</label><br>
+                    <input type="text" placeholder="Digite o código da disciplina" />
+                </div>
+
+                <div>
+                    <label>Disciplina</label><br>
+                    <input type="text" placeholder="Digite o nome da disciplina" />
+                </div>
+
+                <div>
+                    <label>Horário da monitoria</label><br>
+                    <div style="display: flex; gap: 5px;">
+                        <input type="time" value="09:00" />
+                        <input type="time" value="10:00" />
+                    </div>
+                </div>
+
+                <div>
+                    <label>Dia(s) da monitoria</label><br>
+                    <input type="date" />
+                </div>
+
+                <div>
+                    <label>Link da sala virtual</label><br>
+                    <input type="url" placeholder="Digite o link" />
+                </div>
+
+                <div class="material-box full-width">
+                    <label>Materiais disponíveis</label><br>
+                    <textarea rows="3"></textarea>
+                    <button type="button">Editar</button>
+                </div>
+
+                <div class="full-width">
+                    <label>Observações</label><br>
+                    <textarea rows="3" placeholder="Digite a descrição"></textarea>
+                </div>
+
+                <div class="botoes">
+                    <button class="btn-cad" id="bt" type="submit" onclick="cadastrar()">Cadastrar nova
+                        monitoria</button>
+                    <button class="btn-cancel" id="bt2" type="button">Cancelar</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="confirm-box" id="confirmBox">
+            <div class="confirm-content">
+                <img src="../img/confirmar.png" style=" width: 50px;
+  margin-bottom: 15px;">
+                <p>Monitoria cadastrada com sucesso!</p>
+                <button onclick="fecharConfirm()" id="bt3">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/monitoria.js"></script>
+</body>
+
+</html>

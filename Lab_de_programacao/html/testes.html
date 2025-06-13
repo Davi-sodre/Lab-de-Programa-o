@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Nova Monitoria</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      background-color: #f8f9fa;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #f3f3f3;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      font-size: 14px;
+    }
+
+    .menu a {
+      display: block;
+      margin-bottom: 12px;
+      color: #00BCD4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-sair {
+      background: none;
+      border: 1px solid #00BCD4;
+      color: #00BCD4;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .conteudo {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .conteudo-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .usuario {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .usuario span {
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .full-width {
+      grid-column: 1 / 3;
+    }
+
+    .material-box {
+      position: relative;
+    }
+
+    .material-box button {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      padding: 4px 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: #00BCD4;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .botoes {
+      grid-column: 1 / 3;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .botoes button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-cadastrar {
+      background-color: #26a69a;
+      color: #fff;
+    }
+
+    .btn-cancelar {
+      background-color: transparent;
+      color: #666;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="https://img.icons8.com/ios-filled/100/student-male.png" alt="Logo Monitoria" />
+        <div><strong>Monitoria</strong> UFMA</div>
+      </div>
+      <div class="menu">
+        <a href="#">Nova Monitoria</a>
+        <a href="#">Sessões Agendadas</a>
+      </div>
+    </div>
+    <button class="btn-sair">Sair</button>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="conteudo">
+    <div class="conteudo-container">
+      <div class="topo">
+        <div>Olá, <strong>Nome Monitor</strong></div>
+        <div class="usuario">
+          <div>Nome Monitor<br><span>Monitor</span></div>
+          <div>👤</div>
+        </div>
+      </div>
+
+      <h2>Cadastrar nova monitoria</h2>
+
+      <form>
+        <div>
+          <label>Curso</label><br>
+          <select>
+            <option>Selecione</option>
+            <option>Engenharia</option>
+            <option>Medicina</option>
+            <option>Direito</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Código da Disciplina</label><br>
+          <input type="text" placeholder="Digite o código da disciplina" />
+        </div>
+
+        <div>
+          <label>Disciplina</label><br>
+          <input type="text" placeholder="Digite o nome da disciplina" />
+        </div>
+
+        <div>
+          <label>Horário da monitoria</label><br>
+          <div style="display: flex; gap: 5px;">
+            <input type="time" value="09:00" />
+            <input type="time" value="10:00" />
+          </div>
+        </div>
+
+        <div>
+          <label>Dia(s) da monitoria</label><br>
+          <input type="date" />
+        </div>
+
+        <div>
+          <label>Link da sala virtual</label><br>
+          <input type="url" placeholder="Digite o link" />
+        </div>
+
+        <div class="material-box full-width">
+          <label>Materiais disponíveis</label><br>
+          <textarea rows="3"></textarea>
+          <button type="button">Editar</button>
+        </div>
+
+        <div class="full-width">
+          <label>Observações</label><br>
+          <textarea rows="3" placeholder="Digite a descrição"></textarea>
+        </div>
+
+        <div class="botoes">
+          <button class="btn-cadastrar" type="submit">Cadastrar nova monitoria</button>
+          <button class="btn-cancelar" type="button">Cancelar</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+</html>

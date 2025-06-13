@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Cadastrar materiais</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/notificacao.css">
+    <link rel="stylesheet" href="../css/cadastrar-materiais.css">
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <div>
+            <div class="logo">
+                <img src="../img/logo1.ico" alt="logo">
+            </div>
+            <div class="menu">
+                <a href="buscar-monitoria.html">Buscar monitorias</a>
+                <a href="sessao-aluno.html">Minhas sessões</a>
+            </div>
+        </div>
+        <div class="logout-button">
+            <button onclick="logout()">Sair</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="topbar">
+            <div class="icons" onclick="alternarNotificacoes()">
+                <img src="https://img.icons8.com/ios/50/000000/appointment-reminders--v1.png" alt="notificação"
+                    id="iconeSino" />
+                <span class="indicador-notificacao" id="indicadorNotificacao"></span>
+
+                <div class="notificacoes-box" id="notificacoesBox">
+                    <h4>Notificações</h4>
+                    <ul id="listaNotificacoes">
+                        <!-- Itens dinâmicos do JS -->
+                    </ul>
+                </div>
+            </div>
+            <div class="user perfil-link" onclick="abrirPerfil()">
+                <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" width="30" alt="perfil">
+                <div>
+                    <span>Nome Monitor</span>
+                    <strong>Monitor</strong>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header">
+                 Adicionar material
+            </div>
+
+            <h1>Material</h1>
+
+            <form id="formMaterial">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Digite o título do material">
+
+                <label for="arquivo">Arquivo</label>
+                <div class="upload-box" id="uploadBox">
+                    <span>&uarr;</span>
+                    <p>Arraste e solte o arquivo ou clique para fazer o upload</p>
+                    <input type="file" id="arquivo" style="display: none;">
+                </div>
+                <button type="button" class="add-btn" >Adicionar</button>
+
+                <label for="link">Link</label>
+                <input type="url" id="link" placeholder="Coloque o link para um material externo">
+
+                <button type="submit" class="save-btn">Salvar</button>
+            </form>
+        </div>
+        <div class="confirm-box" id="confirmBox">
+            <div class="confirm-content">
+                <img src="../img/confirmar.png" style=" width: 50px;
+  margin-bottom: 15px;">
+                <p>Material cadastrado com sucesso!</p>
+                <button onclick="fecharConfirm()" id="bt3">OK</button>
+            </div>
+        </div>
+
+        <!-- fim-->
+    </div>
+    <script src="../js/home.js"></script>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/cadastrar-materiais.js"></script>
+</body>
+
+</html>

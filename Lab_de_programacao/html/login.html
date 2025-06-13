@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área - Mentoria UFMA</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
     <div class="container">
         <div class="esquerda">
             <img src="../img/logo1.ico" alt="Logo Mentoria UFMA" class="logo" width="100">
             <div class="opcoes">
-                <h2>Área</h2>
-                <a href="../html/login02.html" class="btn">Entrar como Aluno</a>
-                <a href="../html/login02.html" class="btn">Entrar como Mentor</a>
-                <div class="linha-com-texto"><span>Primeiro acesso?</span></div>
-                <a href="Cadastro.html" class="btn2">Cadastrar-se</a>
+                <div class="log-step active" id="step1">
+                    <h2>Área</h2>
+                    <a href="#" class="btn" id="home-aluno" onclick="nextStep(2, this.id); return false;">Entrar como
+                        Aluno</a>
+                    <a href="#" class="btn" id="home-monitor" onclick="nextStep(2, this.id); return false;">Entrar como
+                        Mentor</a>
+                    <div class="linha-com-texto"><span>Primeiro acesso?</span></div>
+                    <a href="Cadastro.html" class="btn2">Cadastrar-se</a>
+                </div>
+
+            </div>
+            <div class="log-step" id="step2">
+                <h2>Entrar</h2>
+                <div class="form">
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="Informe o e-mail cadastrado">
+                </div>
+                <div class="form">
+                    <label for="senha">Senha</label>
+                    <input type="password" placeholder="Informe a senha cadastrada">
+                </div>
+                <a href="#"class="btn-form" onclick="finalizar(); return false;">Entrar</a>
             </div>
         </div>
         <div class="direita">
@@ -23,5 +42,7 @@
         </div>
 
     </div>
-</body> 
+    <script src="../js/login.js"></script>
+</body>
+
 </html>

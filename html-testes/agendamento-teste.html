@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendar Monitoria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    .btn-agendar {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-agendar:disabled {
+      background-color: #6c757d;
+      cursor: default;
+    }
+
+    .alerta {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .alerta button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #155724;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" class="search-bar" placeholder="Pesquisar monitorias..." oninput="filtrarCards(this.value)">
+
+  <div id="alerta-container"></div>
+
+  <div id="cards-container">
+    <!-- Exemplo de card -->
+    <div class="card" data-titulo="Matemática Básica">
+      <h3>Matemática Básica</h3>
+      <p>Monitor: João Silva</p>
+      <p>Horário: Terça, 14h</p>
+      <button class="btn-agendar" onclick="agendar(this)">Agendar</button>
+    </div>
+
+    <div class="card" data-titulo="Física I">
+      <h3>Física I</h3>
+      <p>Monitor: Maria Souza</p>
+      <p>Horário: Quarta, 10h</p>
+      <button class="btn-agendar" onclick="agendar(this)">Agendar</button>
+    </div>
+
+    <div class="card" data-titulo="Algoritmos">
+      <h3>Algoritmos</h3>
+      <p>Monitor: Pedro Lima</p>
+      <p>Horário: Quinta, 16h</p>
+      <button class="btn-agendar" onclick="agendar(this)">Agendar</button>
+    </div>
+  </div>
+
+  <script>
+    function agendar(botao) {
+      // Mudar o botão para cinza e desabilitar
+      botao.textContent = "Agendado";
+      botao.disabled = true;
+
+      // Criar alerta
+      const alerta = document.createElement("div");
+      alerta.className = "alerta";
+      alerta.innerHTML = `
+        <span>Agendamento realizado com sucesso!</span>
+        <button onclick="this.parentElement.remove()">×</button>
+      `;
+
+      document.getElementById("alerta-container").appendChild(alerta);
+    }
+
+    function filtrarCards(termo) {
+      const cards = document.querySelectorAll('.card');
+      termo = termo.toLowerCase();
+
+      cards.forEach(card => {
+        const titulo = card.getAttribute('data-titulo').toLowerCase();
+        card.style.display = titulo.includes(termo) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

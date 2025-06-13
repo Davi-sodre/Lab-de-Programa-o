@@ -125,4 +125,5 @@ input, select {
 .btn.next {
       background-color: #03bcd3;
       color: white;
+      text-decoration: none;
     }
