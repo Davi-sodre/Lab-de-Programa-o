@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="esquerda">
+            <form class="form" id="cadform">
+                <div class="topo">
+                    <h2>Cadastro</h2>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="circle active" id="circle1">1</div><span>Inform. pessoais</span></div>
+                    <div class="step"><div class="circle" id="circle2">2</div><span>Preferências</span></div>
+                    <div class="step"><div class="circle" id="circle3">3</div><span>Senha</span></div>
+                </div>
+                <!-- Primeira parte -->
+                <div class="form-step active" id="step1">
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Nome completo" required>
+                    <label for="celular">Celular</label>
+                    <input type="text" placeholder="Celular (opcional)">
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="E-mail institucional" required>
+                    <label for="data">Data de nascimento</label>
+                    <input type="date" placeholder="Data de nascimento" required>
+                    <div class="btns">
+                        <button type="button" class="btn next" onclick="nextStep(2)">Continuar</button>
+
+                        <button class="btn-cancelar" onclick="logout()">Cancelar</button>
+                    </div>
+                    
+
+                </div>
+                <!-- Segunda parte -->
+                <div class="form-step" id="step2">
+                    <label>Curso</label>
+                    <select required>
+                        <option disabled selected>Selecione o curso</option>
+                        <option>Curso 1</option>
+                        <option>Curso 2</option>
+                    </select>
+                    <label>Matricula</label>
+                    <input type="text" placeholder="Matrícula" required>
+                    <label>Cadeiras matriculado</label>
+                    <select multiple required size="3">
+                        <option disabled>Selecione as cadeiras (múltiplas)</option>
+                        <option>Cadeira 1</option>
+                        <option>Cadeira 2</option>
+                        <option>Cadeira 3</option>
+                        <option>Cadeira 4</option>
+                    </select>
+                    <div class="btns">
+                        <button type="button" class="btn" onclick="nextStep(1)">Voltar</button>
+                        <button type="button" class="btn next" onclick="nextStep(3)">Continuar</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <label>Senha</label>
+                    <input type="password" placeholder="Informe a senha" required>
+                    <label>Confirme senha</label>
+                    <input type="password" placeholder="Confirme a senha" required>
+                    <div class="btns">
+                        <button type="button" class="btn" onclick="nextStep(2)">Voltar</button>
+                        <a href="agendamento.html" class="btn next">Finalizar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="direita">
+             <img src="../img/img - cadastro1.png" alt="Estudante" />
+        </div>
+    </div>
+
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>
